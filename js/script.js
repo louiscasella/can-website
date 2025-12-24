@@ -58,45 +58,45 @@ let addams = {
 
 
 
-let AffichagePassagers = async function(){
+// let AffichagePassagers = async function(){
 	
-	//fetch API
-	let responseReservation = await fetch("https://can.iutrs.unistra.fr/api/reservation/1");
-    let dataReservation = await responseReservation.json();
+// 	//fetch API
+// 	let responseReservation = await fetch("https://can.iutrs.unistra.fr/api/reservation/1");
+//     let dataReservation = await responseReservation.json();
 
-	let depart = document.getElementById("depart");
-	let arrivee = document.getElementById("arrivee");
-	let date = document.getElementById("date");
-	let heure = document.getElementById("heure");
-	let bateau = document.getElementById("bateau");
-	let numReservation = document.getElementById("numReservation");
-	let nomReservation = document.getElementById("nomReservation");
+// 	let depart = document.getElementById("depart");
+// 	let arrivee = document.getElementById("arrivee");
+// 	let date = document.getElementById("date");
+// 	let heure = document.getElementById("heure");
+// 	let bateau = document.getElementById("bateau");
+// 	let numReservation = document.getElementById("numReservation");
+// 	let nomReservation = document.getElementById("nomReservation");
 
-	depart.innerHTML = dataReservation.portDepart;
-	arrivee.innerHTML = dataReservation.portArrivee
-	date.innerHTML = dataReservation.date;
-	heure.innerHTML = dataReservation.heure;
-	bateau.innerHTML = dataReservation.bateau;
-	numReservation.innerHTML = dataReservation.id;
-	nomReservation.innerHTML = dataReservation.nom;
+// 	depart.innerHTML = dataReservation.portDepart;
+// 	arrivee.innerHTML = dataReservation.portArrivee
+// 	date.innerHTML = dataReservation.date;
+// 	heure.innerHTML = dataReservation.heure;
+// 	bateau.innerHTML = dataReservation.bateau;
+// 	numReservation.innerHTML = dataReservation.id;
+// 	nomReservation.innerHTML = dataReservation.nom;
 	
-	//fetch API
-	let responsePassager = await fetch("https://can.iutrs.unistra.fr/api/reservation/1/passager/1");
-    let dataPassager = await responsePassager.json();
+// 	//fetch API
+// 	let responsePassager = await fetch("https://can.iutrs.unistra.fr/api/reservation/1/passager/1");
+//     let dataPassager = await responsePassager.json();
 	
-	let nomPassager = document.getElementById("nomPassager");
-	let prenomPassager = document.getElementById("prenomPassager");
-	let catPassager = document.getElementById("catPassager");
-	let prixPassager = document.getElementById("prixPassager");
+// 	let nomPassager = document.getElementById("nomPassager");
+// 	let prenomPassager = document.getElementById("prenomPassager");
+// 	let catPassager = document.getElementById("catPassager");
+// 	let prixPassager = document.getElementById("prixPassager");
 
 
-}
+// }
 
-let buttonPassagers = document.getElementById("choixPassagers");
+// let buttonPassagers = document.getElementById("choixPassagers");
 
-if (buttonPassagers) { // seulement si l'élément existe
-    buttonPassagers.addEventListener("click", AffichagePassagers);
-}
+// if (buttonPassagers) { // seulement si l'élément existe
+//     buttonPassagers.addEventListener("click", AffichagePassagers);
+// }
 
 // buttonSuivant.addEventListener("click", buttonVehicules);
 
