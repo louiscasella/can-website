@@ -9,25 +9,47 @@
 </head>
 <body>
 
-    <header>
-        <img src="img/logo.png" alt="Logo">
-
-    </header>
+    <header class="top">
+        
+        <img src="img/logo.png" alt="Logo de la CAN">
 
         <nav>
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li class="current-menu"><a href="reservation.html">Voir une réservation</a></li>
-                <li><a href="facture.html">Facture</a></li>
+                <li class="current-menu"><a href="index.html">Accueil</a></li>
+                <li><a href="reservation.html">Voir une réservation</a></li> 
                 <li><a href="tableau.html">Tableau de bord</a></li>
                 <li><a href="stats.html">Statistiques</a></li>
             </ul>
         </nav>
 
-        <form action="boarding.html" method="get">
-            <input type="text" name="numeroReservation" placeholder="Donner numéro de réservation" required>
-            <button type="submit">Envoyer</button>
-        </form>
-  
+        <img src="img/logo-iut.png" alt="Logo de l'IUT Robert Schuman">
+
+    </header>
+
+    <main>
+        
+            <div class="left">
+                <p>contenu gauche</p>
+            </div>
+
+            <section>
+                
+                <form action="boarding.html" method="get">
+                    <input type="text" name="numeroReservation" placeholder="Donner numéro de réservation" required>
+                    <button type="submit">Envoyer</button>
+                </form>
+
+            </section>
+
+            <div class="right">
+                <p>contenu droite</p>
+            </div>
+
+    </main>
+
+    <footer class="bottom">
+        <p>IUT ROBERT SCHUMAN 2025</p>
+    </footer>
+
 </body>
 </html>

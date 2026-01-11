@@ -1,71 +1,99 @@
-body {
+html body {
     font-family: Arial, sans-serif;
-    background-color: #002d42;
-}
-/* Les listes */
-ul {
-	list-style-type: none; /* Retire les puces des listes */
-	margin: 2rem; /* Espace vertical autour de la liste */
-	padding: 0; /* Pas de padding pour la liste */
-}
-
-li {
-    border-radius: 2rem; /* Bordures arrondies sur la droite */
-    box-shadow: 5px 5px 10px black; /* Ombre portée sous chaque élément de la liste */
-	margin-bottom: 1rem; /* Espace entre les items de la liste */
-	padding: 1rem 1.5rem; /* Espacement interne des items */
-	text-align: center; /* Centre le texte dans les items */
+    background-color: #0B638C;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
 }
 
-nav ul, nav li {
-	padding: .5rem 0; /* Espacement vertical des éléments du menu */
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #073e57;
+    margin-bottom: 1rem;
+    border-bottom: solid 0.1rem #15a5e8;
 }
 
-nav li {
-	background-color: #bababa; /* Fond orange pour les items du menu */
+.top img {
+    width: 10rem;
+    height: auto;
+    margin: 1rem;
 }
 
-nav a {
-	color: #000000; /* Couleur de texte des liens (blanc) */
+.top nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.top nav li {
+    background-color: #FCC300;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 1rem;
+    text-align: center;
+    box-shadow: 5px 5px 10px black;
+}
+
+.top nav a {
+    font-size: 1.5rem;
+	color: #0B638C; /* Couleur de texte des liens (blanc) */
 	font-weight: bold; /* Texte en gras */
 	text-decoration: none; /* Retire le soulignement des liens */
 }
 
-nav li:hover a, 
 li.current-menu a {
-    color: #410067; /* Change la couleur du texte des liens au survol ou si c'est l'item actif */
+    color: #15a5e8; /* Change la couleur du texte des liens au survol ou si c'est l'item actif */
 }
 
 nav li:hover {
-	width: 105%; /* Agrandit légèrement l'item de menu lors du survol */
+	scale: 105%; /* Agrandit légèrement l'item de menu lors du survol */
 }
 
-.CarteEmbarquement {
+main {
     display: flex;
-    background-color: #0B638C;
-    border: 4px solid black;
-    border-radius: 20px;
-    margin: 20px;
-    padding: 20px;
-    width: 70%;
+    flex-grow: 1; /* occupe tt l'espace */
+    flex-direction: row;
+    justify-content: space-between;
+}
+.sideBar {
+    width: 12rem;
+    background-color:#073e57;
+    border-top: solid 0.1rem #15a5e8;
+    border-bottom: solid 0.1rem #15a5e8;
 }
 
-.InfoTrajet span {
-    background-color: white;
-    border-radius: 20px;
-    padding: 2px;
+.leftSideBar {
+    border-radius: 0 1rem 1rem 0;
+    border-right: solid 0.1rem #15a5e8;
 }
 
-.InfoReservation {
-    background-color: white;
-    border: 4px solid black;
-    border-radius: 20px;
+.rightSideBar{
+    border-radius: 1rem 0 0 1rem;
+    border-left: solid 0.1rem #15a5e8;
+}
+    
+.bottom {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    background-color: #073e57;
+    color: #ffffff;
+    border-top: solid 0.1rem #15a5e8;
 }
 
-.qrcode {
-    width: 60px;
-    height: 60px;
-}
+
+
+
 
 
 

@@ -10,64 +10,96 @@
 </head>
 <body>
 
+    <header class="top">
+        
+        <img src="img/logo.png" alt="Logo de la CAN">
+
+        <nav>
+            <ul>
+                <li class="current-menu"><a href="index.html">Accueil</a></li>
+                <li><a href="reservation.html">Voir une réservation</a></li> 
+                <li><a href="tableau.html">Tableau de bord</a></li>
+                <li><a href="stats.html">Statistiques</a></li>
+            </ul>
+        </nav>
+
+        <img src="img/logo-iut.png" alt="Logo de l'IUT Robert Schuman">
+
+    </header>
+
     <main>
         
-        <button id="precedent">Precedent</button>
-        <button id="suivant">Suivant</button>
-
-        <section class="CarteEmbarquement">
-
-            <div class="ColonneGauche">
-                <article>
-                    <figure>
-                        <img src="img/logo.png" alt="Logo">			
-                    </figure>
-                </article>
-                
-                <article class="InfoTrajet">
-
-                        <p>Gare de départ <span id="depart"></span></p>
-
-                        <p>Gare d'arrivée <span id="arrivee"></span></p>
-
-                        <p>Date <span id="date"></span></p>
-
-                        <p>Heure départ <span id="heure"></span></p>
-
-                        <p>Bateau <span id="bateau"></span></p>
-
-                </article>
+            <div class="left">
+                <p>contenu gauche</p>
             </div>
 
-            <div class="ColonneDroite">
+            <section>
                 
-                <h1>Carte d'embarquement</h1>
+                <button id="precedent">Precedent</button>
+                <button id="suivant">Suivant</button>
 
-                <article class="InfoReservation">
-                        
-                    <p>Réservation <span id="numReservation"></span></p>
-                    
-                    <p>Nom <span id="nomReservation"></span></p>
+                    <article class="CarteEmbarquement">
 
-                    <hr>
-
-                    <p>Passager <img class="qrcode" src="img/qrcode.png"></p>
-                    
-                    <p>Nom <span id="nomPassager"></span></p>
-
-                    <p>Prénom <span id="prenomPassager"></span></p>
-
-                    <p>Catégorie <span id="catPassager"></span></p>
+                        <div class="ColonneGauche">
+                            <article>
+                                <figure>
+                                    <img src="img/logo.png" alt="Logo">			
+                                </figure>
+                            </article>
                 
-                    <p>Prix <span id="prixPassager"></span></p>
+                            <article class="InfoTrajet">
 
-                </article>
-                
-            </div>
+                                    <p>Gare de départ <span id="depart"></span></p>
+
+                                    <p>Gare d'arrivée <span id="arrivee"></span></p>
+
+                                    <p>Date <span id="date"></span></p>
+
+                                    <p>Heure départ <span id="heure"></span></p>
+
+                                    <p>Bateau <span id="bateau"></span></p>
+
+                            </article>
+                        </div>
+
+                        <div class="ColonneDroite">
+                            
+                            <h1>Carte d'embarquement</h1>
+
+                            <article class="InfoReservation">
+                                    
+                                <p>Réservation <span id="numReservation"></span></p>
+                                
+                                <p>Nom <span id="nomReservation"></span></p>
+
+                                <hr>
+
+                                <p>Passager <img class="qrcode" src="img/qrcode.png"></p>
+                                
+                                <p>Nom <span id="nomPassager"></span></p>
+
+                                <p>Prénom <span id="prenomPassager"></span></p>
+
+                                <p>Catégorie <span id="catPassager"></span></p>
+                            
+                                <p>Prix <span id="prixPassager"></span></p>
+
+                            </article>
+                            
+                        </div>
         
-        </section>
+                    </section>
 
+            </section>
+
+            <div class="right">
+                <p>contenu droite</p>
+            </div>
     </main>
+
+    <footer class="bottom">
+        <p>IUT ROBERT SCHUMAN 2025</p>
+    </footer>
 
     <script src="js/passengerCard.js"></script>
 </body>
