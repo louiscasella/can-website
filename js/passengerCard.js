@@ -1,9 +1,13 @@
+let params = new URLSearchParams(window.location.search);
+
+let numeroReservation = params.get("numeroReservation");
+
 let nbPassagers;
 
 let AffichagePassagers = async function(numeroPassager){
 	
 	//fetch API
-	let responseReservation = await fetch("https://can.iutrs.unistra.fr/api/reservation/1");
+	let responseReservation = await fetch(`https://can.iutrs.unistra.fr/api/reservation/${numeroReservation}`);
     let dataReservation = await responseReservation.json();
 	nbPassagers = dataReservation.nbPassagers;
 
@@ -24,7 +28,7 @@ let AffichagePassagers = async function(numeroPassager){
 	nomReservation.innerHTML = dataReservation.nom;
 	
 	//fetch API
-	let responsePassager = await fetch(`https://can.iutrs.unistra.fr/api/reservation/1/passager/${numeroPassager}`);
+	let responsePassager = await fetch(`https://can.iutrs.unistra.fr/api/reservation/${numeroReservation}/passager/${numeroPassager}`);
     let dataPassager = await responsePassager.json();
 	
 	let nomPassager = document.getElementById("nomPassager");

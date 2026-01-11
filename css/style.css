@@ -1,5 +1,43 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #002d42;
+}
+/* Les listes */
+ul {
+	list-style-type: none; /* Retire les puces des listes */
+	margin: 2rem; /* Espace vertical autour de la liste */
+	padding: 0; /* Pas de padding pour la liste */
+}
+
+li {
+    border-radius: 2rem; /* Bordures arrondies sur la droite */
+    box-shadow: 5px 5px 10px black; /* Ombre portée sous chaque élément de la liste */
+	margin-bottom: 1rem; /* Espace entre les items de la liste */
+	padding: 1rem 1.5rem; /* Espacement interne des items */
+	text-align: center; /* Centre le texte dans les items */
+}
+
+nav ul, nav li {
+	padding: .5rem 0; /* Espacement vertical des éléments du menu */
+}
+
+nav li {
+	background-color: #bababa; /* Fond orange pour les items du menu */
+}
+
+nav a {
+	color: #000000; /* Couleur de texte des liens (blanc) */
+	font-weight: bold; /* Texte en gras */
+	text-decoration: none; /* Retire le soulignement des liens */
+}
+
+nav li:hover a, 
+li.current-menu a {
+    color: #410067; /* Change la couleur du texte des liens au survol ou si c'est l'item actif */
+}
+
+nav li:hover {
+	width: 105%; /* Agrandit légèrement l'item de menu lors du survol */
 }
 
 .CarteEmbarquement {
