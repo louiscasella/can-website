@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choix des cartes</title>
-    <link rel="stylesheet" href="css/normalize.css">
+    <title>Cartes d'embarquement</title>
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -29,81 +28,99 @@
 
 
     <main>
+
+        <div class="sideBar leftSideBar">
+                
+            <div class="button">
+                <button id="buttonPassager">Passagers</button>
+                <button id="buttonVehicule">Véhicules</button>
+            </div>
+
+        </div>
         
-        <button id="buttonPassager">Passagers</button>
-        <button id="buttonVehicule">Véhicules</button>
+        <div class="carte">
+            
+            <button id="buttonPrecedent" class="buttonSwipe">◀️</button>
 
-        <section class="carteEmbarquement">
+            <section class="carteEmbarquement">
 
-            <div class="ColonneGauche">
-                <article>
-                    <figure>
-                        <img src="img/logo.png" alt="Logo">			
-                    </figure>
-                </article>
-    
-                <article class="InfoTrajet">
+                <div class="ColonneGauche">
+                    <article>
+                        <figure>
+                            <img src="img/logoPass.png" alt="Logo">			
+                        </figure>
+                    </article>
+        
+                    <article class="InfoTrajet">
 
-                        <p>Gare de départ <span id="depart"></span></p>
+                            <p>Gare de départ <span id="depart"></span></p>
 
-                        <p>Gare d'arrivée <span id="arrivee"></span></p>
+                            <p>Gare d'arrivée <span id="arrivee"></span></p>
 
-                        <p>Date <span id="date"></span></p>
+                            <p>Date <span id="date"></span></p>
 
-                        <p>Heure départ <span id="heure"></span></p>
+                            <p>Heure départ <span id="heure"></span></p>
 
-                        <p>Bateau <span id="bateau"></span></p>
+                            <p>Bateau <span id="bateau"></span></p>
 
-                </article>
-            </div>
+                    </article>
+                </div>
 
-            <div class="ColonneDroite">
-                
-                <h1>Carte d'embarquement</h1>
-
-                <article class="InfoReservation">
-                        
-                    <p>Réservation <span id="numReservation"></span></p>
+                <div class="ColonneDroite">
                     
-                    <p>Nom <span id="nomReservation"></span></p>
+                    <h1>Carte d'embarquement</h1>
 
-                    <hr>
-
-                    <div id="infoPassagers">
-                        <p>Passager <img class="qrcode" src="img/qrcode.png"></p>
+                    <article class="InfoReservation">
+                            
+                        <p>Réservation <span id="numReservation"></span></p>
                         
-                        <p>Nom <span id="nomPassager"></span></p>
+                        <p>Nom <span id="nomReservation"></span></p>
 
-                        <p>Prénom <span id="prenomPassager"></span></p>
+                        <hr>
 
-                        <p>Catégorie <span id="catPassager"></span></p>
-                    
-                        <p>Prix <span id="prixPassager"></span></p>
-                    </div>
+                        <div id="infoPassagers">
+                            <p>Passager <img class="qrcode" src="img/qrcode.png"></p>
+                            
+                            <p>Nom <span id="nomPassager"></span></p>
 
-                    <div id="infoVehicules">
-                        <p>Véhicule <img class="qrcode" src="img/qrcode.png"></p>
+                            <p>Prénom <span id="prenomPassager"></span></p>
+
+                            <p>Catégorie <span id="catPassager"></span></p>
                         
-                        <p>Catégorie <span id="catVehicule"></span></p>
+                            <p>Prix <span id="prixPassager"></span></p>
+                        </div>
 
-                        <p>Nombre <span id="nombreVehicule"></span></p>
+                        <div id="infoVehicules">
+                            <p>Véhicule <img class="qrcode" src="img/qrcode.png"></p>
+                            
+                            <p>Catégorie <span id="catVehicule"></span></p>
+
+                            <p>Nombre <span id="nombreVehicule"></span></p>
+                        
+                            <p>Prix <span id="prixVehicule"></span></p>
+                        </div>
+
+                    </article>
                     
-                        <p>Prix <span id="prixVehicule"></span></p>
-                    </div>
+                </div>
 
-                </article>
-                
-            </div>
+            </section>
 
-        </section>
+            <button id="buttonSuivant" class="buttonSwipe">▶️</button>
+
+        </div>
+
+        <div class="sideBar rightSideBar">
+            <p>contenu droite</p>
+        </div>
 
     </main>
   
     <footer class="bottom">
-        <p>IUT ROBERT SCHUMAN 2025</p>
+        <p>© CASELLA Louis, PAMPAGNIN Romain, SOHRABI Aquila -- 2025</p>
     </footer>
 
-    <script src="js/passengerCard.js"></script>
+    <script src="js/reservation.js"></script>
 
 </body>
 </html>

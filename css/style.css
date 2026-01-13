@@ -1,23 +1,36 @@
-html body {
+html, body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #0B638C;
-    flex-direction: column;
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
+    background-color: #001d2b;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
+* {
+    font-size: 16px;
+}
+
+main{
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+.top, .bottom, .sideBar {
+    background-color: #00141f;
+}
 .top {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #073e57;
     margin-bottom: 1rem;
     border-bottom: solid 0.1rem #15a5e8;
+}
+
+img {
+    border-radius: 1rem;
 }
 
 .top img {
@@ -34,12 +47,17 @@ html body {
     padding: 0;
 }
 
-.top nav li {
+.top nav li, button{
+    display: flex;
     background-color: #FCC300;
-    border-radius: 0.5rem;
-    padding: 1.5rem;
+    border-radius: 10rem;
+    padding: 1rem;
     margin: 1rem;
     text-align: center;
+    width: 10rem;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
 }
 
 .top nav a {
@@ -53,20 +71,13 @@ li.current-menu a {
     color: #15a5e8; /* Change la couleur du texte des liens au survol ou si c'est l'item actif */
 }
 
-nav li:hover {
-	scale: 105%; /* Agrandit légèrement l'item de menu lors du survol */
+nav li:hover, button:hover {
+	transform: scale(1.05); /* Agrandit légèrement l'item de menu lors du survol */
     box-shadow: 5px 5px 10px #15a5e8;
 }
 
-main {
-    display: flex;
-    flex-grow: 1; /* occupe tt l'espace */
-    flex-direction: row;
-    justify-content: space-between;
-}
 .sideBar {
     width: 12rem;
-    background-color:#073e57;
     border-top: solid 0.1rem #15a5e8;
     border-bottom: solid 0.1rem #15a5e8;
 }
@@ -86,18 +97,177 @@ main {
     margin-top: 1rem;
     display: flex;
     justify-content: center;
-    background-color: #073e57;
     color: #ffffff;
     border-top: solid 0.1rem #15a5e8;
 }
-
 
 .hidden {
     display: none;
 }
 
 
+.carteEmbarquement{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color:#0B638C;
+    margin: 1rem;
+    padding: 1rem;
+    border: solid 5px black;
+    border-radius: 1rem;
+    color: white;
+
+    max-width: 50%;
+    max-height: 50%;
+    flex-shrink: 0;
+}
+
+.ColonneGauche, .ColonneDroite {
+    display: flex;
+    flex-direction: column;
+}
+
+.ColonneGauche {
+    width: 45%;
+}
+
+.ColonneDroite {
+    width: 45%;
+}
+
+.ColonneGauche figure {
+    margin: 0;
+    background-color: white;
+    border-radius: 1rem;
+    border: solid 5px black;
+}
+
+.ColonneGauche img {
+    max-width: 100%;
+}
+
+.InfoTrajet p {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+.InfoTrajet span {
+    background-color: white;
+    color: black;
+    padding: 8px;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+
+.ColonneDroite h1 {
+    text-align: center;
+    color: white;
+}
+
+.InfoReservation {
+    background-color: white;
+    color: black;
+    border: solid 5px black;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+
+.InfoReservation  p {
+    display: flex;
+    justify-content: space-between;
+}
+
+.qrcode {
+    width: 10%;
+    border-radius: 0;
+}
+
+.carte {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.carte .buttonSwipe {
+    background-color: #FCC300; /* Couleur jaune */
+    border: none; /* Retire les bordures par défaut */
+    width: 3rem; /* Fixe une largeur cohérente pour éviter l'étirement horizontal */
+    height: 3rem; /* Fixe une hauteur pour éviter l'étirement vertical */
+    border-radius: 50%; /* Rend les boutons circulaires */
+    font-size: 1.5rem; /* Taille du texte pour garantir la lisibilité */
+    cursor: pointer; /* Curseur de pointeur pour indiquer interactivité */
+    box-shadow: 2px 4px 8px rgba(21, 165, 232, 0.6); /* Ombre subtile pour donner du relief */
+    transition: transform 0.3s; /* Transition fluide au survol */
+}
+
+.carte .buttonSwipe:hover {
+    transform: scale(1.2); /* Agrandit légèrement le bouton au survol */
+    background-color: #15a5e8; /* Change la couleur de fond au survol */
+}
+
+form {
+    display: flex;
+    justify-content: center; /* Centre horizontalement les éléments */
+    align-items: center; /* Centre verticalement les éléments */
+    gap: 1rem; /* Ajoute de l’espace entre le champ et le bouton */
+    padding: 1.5rem; /* Ajoute de l’espace autour du formulaire */
+    background-color: #00141f; /* Couleur de fond du formulaire */
+    border-radius: 1rem; /* Bordures arrondies */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Ombre pour relief */
+}
+
+form input{
+    padding: 0.8rem; /* Ajoute de l’espace intérieur */
+    font-size: 1rem; /* Taille de la police lisible */
+    border: 2px solid #00aeff; /* Bordure avec couleur personnalisée */
+    border-radius: 0.5rem; /* Bordures arrondies */
+    background-color:#0B638C; /* Couleur de fond */
+    color: #ffffff; /* Couleur du texte */
+    outline: none; /* Retirer l’indication par défaut en focus */
+    width: 20rem; /* Largeur du champ */
+}
 
 
+form button {
+    padding: 0.8rem ; /* Taille confortable du bouton */
+    font-size: 1.2rem; /* Texte bien visible */
+    font-weight: bold; /* Style gras du texte */
+    border: none; /* Retire les bordures par défaut */
+    border-radius: 0.5rem; /* Bordures arrondies */
+    background-color: #FCC300; /* Couleur vive pour attirer l’attention */
+    color: #0B638C; /* Texte contrasté */
+    cursor: pointer; /* Curseur interactif */
+    box-shadow: 2px 4px 8px rgba(21, 165, 232, 0.6); /* Ombre subtile */
+    transition: transform 0.3s /* Animation fluide */
+}
+
+form button:hover {
+    transform: scale(1.1); /* Agrandit légèrement au survol */
+    box-shadow: 3px 6px 12px rgba(252, 195, 0, 0.8); /* Intensifie l’ombre */
+    background-color: #15a5e8; /* Change la couleur de fond au survol */
+    color: white; /* Texte blanc au survol */
+}
 
 
+.middle {
+    margin: 5rem;
+    display:flex;
+    flex-direction: column;
+    color: rgb(214, 214, 214);
+    align-items: center;
+    text-align: center;
+}
+
+.middle img {
+    width: 30rem;
+}
+
+h1 {
+    font-size: 3rem
+}
+
+h2 {
+    font-size: 1.5rem;
+}
