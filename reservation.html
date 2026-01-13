@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
+    <title>Choix des cartes</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 
@@ -15,8 +16,8 @@
 
         <nav>
             <ul>
-                <li class="current-menu"><a href="index.html">Accueil</a></li>
-                <li><a href="reservation.html">Voir une réservation</a></li> 
+                <li><a href="index.html">Accueil</a></li>
+                <li class="current-menu"><a href="submitReservation.html">Voir une réservation</a></li> 
                 <li><a href="tableau.html">Tableau de bord</a></li>
                 <li><a href="stats.html">Statistiques</a></li>
             </ul>
@@ -26,30 +27,83 @@
 
     </header>
 
+
     <main>
         
-            <div class="left">
-                <p>contenu gauche</p>
+        <button id="buttonPassager">Passagers</button>
+        <button id="buttonVehicule">Véhicules</button>
+
+        <section class="carteEmbarquement">
+
+            <div class="ColonneGauche">
+                <article>
+                    <figure>
+                        <img src="img/logo.png" alt="Logo">			
+                    </figure>
+                </article>
+    
+                <article class="InfoTrajet">
+
+                        <p>Gare de départ <span id="depart"></span></p>
+
+                        <p>Gare d'arrivée <span id="arrivee"></span></p>
+
+                        <p>Date <span id="date"></span></p>
+
+                        <p>Heure départ <span id="heure"></span></p>
+
+                        <p>Bateau <span id="bateau"></span></p>
+
+                </article>
             </div>
 
-            <section>
+            <div class="ColonneDroite">
                 
-                <form action="boarding.html" method="get">
-                    <input type="text" name="numeroReservation" placeholder="Donner numéro de réservation" required>
-                    <button type="submit">Envoyer</button>
-                </form>
+                <h1>Carte d'embarquement</h1>
 
-            </section>
+                <article class="InfoReservation">
+                        
+                    <p>Réservation <span id="numReservation"></span></p>
+                    
+                    <p>Nom <span id="nomReservation"></span></p>
 
-            <div class="right">
-                <p>contenu droite</p>
+                    <hr>
+
+                    <div id="infoPassagers">
+                        <p>Passager <img class="qrcode" src="img/qrcode.png"></p>
+                        
+                        <p>Nom <span id="nomPassager"></span></p>
+
+                        <p>Prénom <span id="prenomPassager"></span></p>
+
+                        <p>Catégorie <span id="catPassager"></span></p>
+                    
+                        <p>Prix <span id="prixPassager"></span></p>
+                    </div>
+
+                    <div id="infoVehicules">
+                        <p>Véhicule <img class="qrcode" src="img/qrcode.png"></p>
+                        
+                        <p>Catégorie <span id="catVehicule"></span></p>
+
+                        <p>Nombre <span id="nombreVehicule"></span></p>
+                    
+                        <p>Prix <span id="prixVehicule"></span></p>
+                    </div>
+
+                </article>
+                
             </div>
+
+        </section>
 
     </main>
-
+  
     <footer class="bottom">
         <p>IUT ROBERT SCHUMAN 2025</p>
     </footer>
+
+    <script src="js/passengerCard.js"></script>
 
 </body>
 </html>

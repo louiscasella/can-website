@@ -1,5 +1,5 @@
 html body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #0B638C;
     flex-direction: column;
     display: flex;
@@ -40,7 +40,6 @@ html body {
     padding: 1.5rem;
     margin: 1rem;
     text-align: center;
-    box-shadow: 5px 5px 10px black;
 }
 
 .top nav a {
@@ -56,6 +55,7 @@ li.current-menu a {
 
 nav li:hover {
 	scale: 105%; /* Agrandit légèrement l'item de menu lors du survol */
+    box-shadow: 5px 5px 10px #15a5e8;
 }
 
 main {
@@ -91,6 +91,10 @@ main {
     border-top: solid 0.1rem #15a5e8;
 }
 
+
+.hidden {
+    display: none;
+}
 
 
 

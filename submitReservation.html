@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choix des cartes</title>
+    <title>Accueil</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
 
@@ -16,8 +15,8 @@
 
         <nav>
             <ul>
-                <li class="current-menu"><a href="index.html">Accueil</a></li>
-                <li><a href="reservation.html">Voir une réservation</a></li> 
+                <li><a href="index.html">Accueil</a></li>
+                <li class="current-menu"><a href="submitReservation.html">Voir une réservation</a></li> 
                 <li><a href="tableau.html">Tableau de bord</a></li>
                 <li><a href="stats.html">Statistiques</a></li>
             </ul>
@@ -27,28 +26,30 @@
 
     </header>
 
-
     <main>
         
-            <div class="left">
+            <div class="leftSideBar sideBar">
                 
             </div>
 
-            <section id="boardingPassLink">
+            <section>
+                
+                <form action="reservation.html" method="get">
+                    <input type="text" name="numeroReservation" placeholder="Donner numéro de réservation" required>
+                    <button type="submit">Envoyer</button>
+                </form>
 
             </section>
 
-            <div class="right">
-                <p>contenu droite</p>
+            <div class="rightSideBar sideBar">
+                
             </div>
-            
+
     </main>
-  
+
     <footer class="bottom">
         <p>IUT ROBERT SCHUMAN 2025</p>
     </footer>
-
-    <script src="js/boarding.js"></script>
 
 </body>
 </html>

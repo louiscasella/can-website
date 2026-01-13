@@ -1,15 +1,22 @@
 let params = new URLSearchParams(window.location.search);
-
 let numeroReservation = params.get("numeroReservation");
 
 let nbPassagers;
+let nbVehicules;
 
-let AffichagePassagers = async function(numeroPassager){
+let infoPassagers = document.getElementById("infoPassagers");
+let infoVehicules = document.getElementById("infoVehicules");
+
+
+//Fonction de l'affichage general (infos qui sont affichés sur les deux cartes)
+let Affichage = async function(){
 	
 	//fetch API
 	let responseReservation = await fetch(`https://can.iutrs.unistra.fr/api/reservation/${numeroReservation}`);
     let dataReservation = await responseReservation.json();
+	
 	nbPassagers = dataReservation.nbPassagers;
+	nbVehicules = dataReservation.nbVehicules;
 
 	let depart = document.getElementById("depart");
 	let arrivee = document.getElementById("arrivee");
@@ -26,6 +33,13 @@ let AffichagePassagers = async function(numeroPassager){
 	bateau.innerHTML = dataReservation.bateau;
 	numReservation.innerHTML = dataReservation.id;
 	nomReservation.innerHTML = dataReservation.nom;
+}
+
+//fonction pour affiché les infos propres aux passagers 
+let AffichagePassager = async function(numeroPassager){
+
+	infoPassagers.classList.remove("hidden");
+	infoVehicules.classList.add("hidden");
 	
 	//fetch API
 	let responsePassager = await fetch(`https://can.iutrs.unistra.fr/api/reservation/${numeroReservation}/passager/${numeroPassager}`);
@@ -42,8 +56,51 @@ let AffichagePassagers = async function(numeroPassager){
 	prixPassager.innerHTML = dataPassager.price;
 }
 
+//fonction pour affiché les infos propres aux passagers 
+let AffichageVehicule = async function(numeroVehicule){
+	
+	infoVehicules.classList.remove("hidden");
+	infoPassagers.classList.add("hidden");
+
+	if (numeroVehicule == 0)
+	{
+		alert("Pas de vehicules pour cette reservation");
+		return;
+	}
+
+	//fetch API
+	let responseVehicule = await fetch(`https://can.iutrs.unistra.fr/api/reservation/${numeroReservation}/vehicule/${numeroVehicule}`);
+    let dataVehicule = await responseVehicule.json();
+	
+	let catVehicule = document.getElementById("catVehicule");
+	let nombreVehicule = document.getElementById("nombreVehicule");
+	let prixVehicule = document.getElementById("prixVehicule");
+
+	catVehicule.innerHTML = dataVehicule.libelle;
+	nombreVehicule.innerHTML = dataVehicule.quantite;
+	prixVehicule.innerHTML = dataVehicule.prix;
+}
+
+Affichage();
+AffichagePassager(1);
+
 let numeroPassager = 1;
-AffichagePassagers(numeroPassager);
+
+if (nbPassagers > 0)
+{
+	numeroPassager = 1;
+}
+
+else 
+{
+	numeroPassager = 0;
+}
+
+let buttonPassager = document.getElementById("buttonPassager");
+let buttonVehicule = document.getElementById("buttonVehicule");
+
+buttonPassager.addEventListener("click",AffichagePassager(1));
+buttonVehicule.addEventListener("click",AffichageVehicule(1));
 
 let PassagerPrecedent = function(){
 	
