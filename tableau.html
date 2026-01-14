@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,8 +17,8 @@
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="submitReservation.html">Voir une réservation</a></li> 
-                <li class="current-menu"><a href="tableau.html">Tableau de bord</a></li>
                 <li><a href="stats.html">Statistiques</a></li>
+                <li class="current-menu"><a href="tableau.html">Tableau de bord</a></li>
             </ul>
         </nav>
 
@@ -29,13 +29,30 @@
     <main>
 
             <div class="sideBar leftSideBar">
-                <p>contenu gauche</p>
             </div>
 
-            <section class="middle">
+            <section class="tableauDeBord">
                 
-                <article class="texte">
-                    <h1>WORK IN PROGRESS</h1>
+                <h1>Tableau de bord</h1>
+                <form>
+                    
+                    <label for="nombre">Choisir une liaison :</label>
+                    <select id="nombre" name="nombre">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    
+                    <label for="date">Choisir une date :</label>
+                    <input type="date" id="date" name="date">
+
+                    <button type="submit">Valider</button>
+
+                </form>
+
+                <article class="infos">
+
                 </article>
 
             </section>
@@ -47,7 +64,7 @@
     </main>
   
     <footer class="bottom">
-        <p>© CASELLA Louis, PAMPAGNIN Romain, SOHRABI Aquila -- 2025</p>
+        <p>© CASELLA Louis, PAMPAGNIN Romain, SOHRABI Aquila - 2025</p>
     </footer>
 
 </body>

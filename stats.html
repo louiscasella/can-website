@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,8 +17,8 @@
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="submitReservation.html">Voir une réservation</a></li> 
-                <li><a href="tableau.html">Tableau de bord</a></li>
                 <li class="current-menu"><a href="stats.html">Statistiques</a></li>
+                <li><a href="tableau.html">Tableau de bord</a></li>
             </ul>
         </nav>
 
@@ -29,19 +29,53 @@
     <main>
 
             <div class="sideBar leftSideBar">
-                <p>contenu gauche</p>
+                
             </div>
 
-            <section class="middle">
-                
-                <article class="texte">
-                    <h1>WORK IN PROGRESS</h1>
-                </article>
+            <div class="stats">
+                    
+                <h1>Statistiques des liaisons pour le mois de novembre 2025</h1>
 
-            </section>
+                <section>
+
+                    <article>
+                        <h2>Lorient > Groix</h2>
+                        <p>Chiffre d'affaire des passagers<span id="caPassagers1"></span></p>
+                        <p>Chiffre d'affaire des véhicules<span id="caVehicules1"></span></p>
+                        <p>Nombre de passagers<span id="nbPassagers1"></span></p>
+                        <p>Nombre de véhicules<span id="nbVehicules1"></span></p>
+                    </article>
+
+                    <article>
+                        <h2>Groix > Lorient</h2>
+                        <p>Chiffre d'affaire des passagers<span id="caPassagers2"></span></p>
+                        <p>Chiffre d'affaire des véhicules<span id="caVehicules2"></span></p>
+                        <p>Nombre de passagers<span id="nbPassagers2"></span></p>
+                        <p>Nombre de véhicules<span id="nbVehicules2"></span></p>
+                    </article>
+
+                    <article>
+                        <h2>Quiberon > Belle-Ile</h2>
+                        <p>Chiffre d'affaire des passagers<span id="caPassagers3"></span></p>
+                        <p>Chiffre d'affaire des véhicules<span id="caVehicules3"></span></p>
+                        <p>Nombre de passagers<span id="nbPassagers3"></span></p>
+                        <p>Nombre de véhicules<span id="nbVehicules3"></span></p>
+                    </article>
+
+                    <article>
+                        <h2>Belle-Ile > Quiberon</h2>
+                        <p>Chiffre d'affaire des passagers<span id="caPassagers4"></span></p>
+                        <p>Chiffre d'affaire des véhicules<span id="caVehicules4"></span></p>
+                        <p>Nombre de passagers<span id="nbPassagers4"></span></p>
+                        <p>Nombre de véhicules<span id="nbVehicules4"></span></p>
+                    </article>
+
+                </section>
+
+            </div>
 
             <div class="sideBar rightSideBar">
-                <p>contenu droite</p>
+                
             </div>
 
     </main>
@@ -49,6 +83,8 @@
     <footer class="bottom">
         <p>© CASELLA Louis, PAMPAGNIN Romain, SOHRABI Aquila - 2025</p>
     </footer>
+
+    <script src="js/stats.js"></script>
 
 </body>
 </html>

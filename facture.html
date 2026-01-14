@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,8 +16,8 @@
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li class="current-menu"><a href="submitReservation.html">Voir une réservation</a></li> 
-                <li><a href="tableau.html">Tableau de bord</a></li>
                 <li><a href="stats.html">Statistiques</a></li>
+                <li><a href="tableau.html">Tableau de bord</a></li>
             </ul>
         </nav>
 
@@ -33,13 +33,16 @@
 
             <section class="facture">
                 
-                <img src="img/logo.png" alt="Logo">
+                <div class="center">
+                    <img src="img/logo.png" alt="Logo">
 
-                <h1><strong>Facture</strong></h1>
+                    <h1>Facture</h1>
+                </div>
+
 
                 <p>Illkirch le <span id="horodatage"></span></p>
 
-                <div class="infos">
+                <article class="infos">
                     <p><strong>Réservation n° :</strong> <span id="reservationId"></span></p>
                     <p><strong>Nom de réservation :</strong> <span id="reservationNom"></span></p>
                     <br>
@@ -47,44 +50,50 @@
                     <p><strong>Date :</strong> <span id="dateTraversee"></span></p>
                     <p><strong>Départ :</strong> <span id="heureDepart"></span></p>
                     <p><strong>Bateau :</strong> <span id="bateau"></span></p>
+                </article>
+
+                <h3>Les personnes : </h3>  
+                
+                <div class="center">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Catégorie</th>
+                                <th>Nombre</th>
+                                <th>Prix unitaire</th>
+                                <th>Prix ligne</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablePassagers">
+                            
+                        </tbody>
+                    </table>
                 </div>
 
-                <h3>Les personnes</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Catégorie</th>
-                            <th>Nombre</th>
-                            <th>Prix unitaire</th>
-                            <th>Prix ligne</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tablePersonnes">
-                        
-                    </tbody>
-                </table>
+                <p class="tabulation">Sous-total personnes :<strong><span id="totalPassagers"></span> €</strong></p>
 
-                <p>Sous-total personnes : <strong> <span id="totalPersonnes"></span> €</strong></p>
-
-                <h3>Les véhicules</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Catégorie</th>
-                            <th>Quantité</th>
-                            <th>Prix unitaire</th>
-                            <th>Prix ligne</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tableVehicules">
-                        
-                    </tbody>
-                </table>
+                <h3>Les véhicules : </h3>
                 
-                <p>Sous-total personnes : <strong> <span id="totalVehicules"></span> €</strong></p>
+                <div class="center">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Catégorie</th>
+                                <th>Quantité</th>
+                                <th>Prix unitaire</th>
+                                <th>Prix ligne</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableVehicules">
+                            
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="tabulation">Sous-total véhicules :<strong> <span id="totalVehicules"></span> €</strong></p>
 
 
-                <p><strong>Prix total: <span id="totalPrix"></span> €</strong></p>
+                <p class="total">Prix total: <strong><span id="totalPrix"></span> €</strong></p>
 
             </section>
 
