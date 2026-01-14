@@ -168,7 +168,16 @@ let Main = async function () {
 	let buttonVehicule = document.getElementById("buttonVehicule");
 
 	buttonPassager.addEventListener("click", async () => await AffichagePassager(1));
-	buttonVehicule.addEventListener("click", async () => { if (variables.numeroVehicule == 0) {alert("il n'y a pas de vehicule pour cette reservation")} else { await AffichageVehicule(1)} } )
+	buttonVehicule.addEventListener("click", async () => { 
+		if (variables.numeroVehicule == 0) 
+		{
+			alert("il n'y a pas de vehicule pour cette reservation")
+		} 
+		else 
+		{ 
+			await AffichageVehicule(1)
+		} 
+		} )
 	
 	let buttonPrecedent = document.getElementById("buttonPrecedent");
 	let buttonSuivant = document.getElementById("buttonSuivant");
