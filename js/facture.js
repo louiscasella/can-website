@@ -2,7 +2,11 @@ let nbPassagers;
 let nbVehicules;
 
 let AffichageInfo = async function() {
-    let responseReservation = await fetch("https://can.iutrs.unistra.fr/api/reservation/1");
+
+    let parametresUrl = new URLSearchParams(window.location.search);
+    numeroReservation = parametresUrl.get("numeroReservation");
+
+    let responseReservation = await fetch(`https://can.iutrs.unistra.fr/api/reservation/${numeroReservation}`);
     let dataReservation = await responseReservation.json();
 
     nbPassagers = dataReservation.nbPassagers;

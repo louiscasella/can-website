@@ -142,6 +142,9 @@ let Main = async function () {
 	let parametresUrl = new URLSearchParams(window.location.search);
 	variables.numeroReservation = parametresUrl.get("numeroReservation");
 
+	let factureLink = document.getElementById("factureLink");
+	factureLink.innerHTML = `<li><a href=facture.html?numeroReservation=${variables.numeroReservation}>Facture</a></li>`
+
 	let response = await fetch(`https://can.iutrs.unistra.fr/api/reservation/${variables.numeroReservation}`);
     let data = await response.json();
 	

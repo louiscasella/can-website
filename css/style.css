@@ -21,7 +21,7 @@ main{
     background-color: #00141f;
 }
 
-.top nav li, button, .buttonSwipe {
+li, button, .buttonSwipe, form button, form input {
     background-color: #00273a;
     color: white;
     border: solid 0.1rem #15a5e8;
@@ -47,7 +47,7 @@ img {
     margin: 1rem;
 }
 
-.top nav ul {
+ul {
     display: flex;
     flex-direction: row;
     list-style-type: none;
@@ -55,7 +55,7 @@ img {
     padding: 0;
 }
 
-.top nav li, button{
+li, button{
     display: flex;
     border-radius: 10rem;
     padding: 1rem;
@@ -65,9 +65,10 @@ img {
     justify-content: center;
     align-items: center;
     transition: transform 0.3s;
+    font-weight: bold;
 }
 
-.top nav a {
+a {
     font-size: 1.5rem;
 	color: white; /* Couleur de texte des liens (blanc) */
 	font-weight: bold; /* Texte en gras */
@@ -78,7 +79,7 @@ li.current-menu a {
     color: #15a5e8; /* Change la couleur du texte des liens au survol ou si c'est l'item actif */
 }
 
-nav li:hover, button:hover {
+li:hover, button:hover {
 	transform: scale(1.05); /* Agrandit légèrement l'item de menu lors du survol */
     box-shadow: 5px 5px 10px #15a5e8;
 }
@@ -230,10 +231,8 @@ form {
 form input{
     padding: 0.8rem; /* Ajoute de l’espace intérieur */
     font-size: 1rem; /* Taille de la police lisible */
-    border: 2px solid #00aeff; /* Bordure avec couleur personnalisée */
+    
     border-radius: 0.5rem; /* Bordures arrondies */
-    background-color:#0B638C; /* Couleur de fond */
-    color: #ffffff; /* Couleur du texte */
     outline: none; /* Retirer l’indication par défaut en focus */
     width: 20rem; /* Largeur du champ */
 }
@@ -243,19 +242,14 @@ form button {
     padding: 0.8rem ; /* Taille confortable du bouton */
     font-size: 1.2rem; /* Texte bien visible */
     font-weight: bold; /* Style gras du texte */
-    border: none; /* Retire les bordures par défaut */
     border-radius: 0.5rem; /* Bordures arrondies */
-    color: #0B638C; /* Texte contrasté */
     cursor: pointer; /* Curseur interactif */
-    box-shadow: 2px 4px 8px rgba(21, 165, 232, 0.6); /* Ombre subtile */
     transition: transform 0.3s /* Animation fluide */
 }
 
 form button:hover {
+    box-shadow: 2px 4px 8px #00aeff; /* Ombre subtile */
     transform: scale(1.1); /* Agrandit légèrement au survol */
-    box-shadow: 3px 6px 12px rgba(252, 195, 0, 0.8); /* Intensifie l’ombre */
-    background-color: #15a5e8; /* Change la couleur de fond au survol */
-    color: white; /* Texte blanc au survol */
 }
 
 
@@ -278,4 +272,20 @@ h1 {
 
 h2 {
     font-size: 1.5rem;
+}
+
+
+.facture {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    flex: 1;
+    align-items: center;
+    margin: 5rem;
+    border-radius: 1rem;
+    text-align: left;
+}
+
+.facture img {
+    width: 40%;
 }
