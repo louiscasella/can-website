@@ -1,6 +1,6 @@
 html, body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #001d2b;
+    background-color: #00273a;
     margin: 0;
     padding: 0;
     display: flex;
@@ -20,6 +20,14 @@ main{
 .top, .bottom, .sideBar {
     background-color: #00141f;
 }
+
+.top nav li, button, .buttonSwipe {
+    background-color: #00273a;
+    color: white;
+    border: solid 0.1rem #15a5e8;
+}
+
+
 .top {
     display: flex;
     flex-direction: row;
@@ -49,7 +57,6 @@ img {
 
 .top nav li, button{
     display: flex;
-    background-color: #FCC300;
     border-radius: 10rem;
     padding: 1rem;
     margin: 1rem;
@@ -62,7 +69,7 @@ img {
 
 .top nav a {
     font-size: 1.5rem;
-	color: #0B638C; /* Couleur de texte des liens (blanc) */
+	color: white; /* Couleur de texte des liens (blanc) */
 	font-weight: bold; /* Texte en gras */
 	text-decoration: none; /* Retire le soulignement des liens */
 }
@@ -117,9 +124,12 @@ nav li:hover, button:hover {
     border-radius: 1rem;
     color: white;
 
-    max-width: 50%;
-    max-height: 50%;
-    flex-shrink: 0;
+    max-width: 70%;
+    max-height: auto;
+}
+
+.carteEmbarquement h1 {
+    font-size: 1.5rem;
 }
 
 .ColonneGauche, .ColonneDroite {
@@ -191,15 +201,14 @@ nav li:hover, button:hover {
 }
 
 .carte .buttonSwipe {
-    background-color: #FCC300; /* Couleur jaune */
-    border: none; /* Retire les bordures par défaut */
+    padding: 2rem;
     width: 3rem; /* Fixe une largeur cohérente pour éviter l'étirement horizontal */
     height: 3rem; /* Fixe une hauteur pour éviter l'étirement vertical */
     border-radius: 50%; /* Rend les boutons circulaires */
     font-size: 1.5rem; /* Taille du texte pour garantir la lisibilité */
     cursor: pointer; /* Curseur de pointeur pour indiquer interactivité */
-    box-shadow: 2px 4px 8px rgba(21, 165, 232, 0.6); /* Ombre subtile pour donner du relief */
     transition: transform 0.3s; /* Transition fluide au survol */
+    background-color: #00141f;
 }
 
 .carte .buttonSwipe:hover {
@@ -236,7 +245,6 @@ form button {
     font-weight: bold; /* Style gras du texte */
     border: none; /* Retire les bordures par défaut */
     border-radius: 0.5rem; /* Bordures arrondies */
-    background-color: #FCC300; /* Couleur vive pour attirer l’attention */
     color: #0B638C; /* Texte contrasté */
     cursor: pointer; /* Curseur interactif */
     box-shadow: 2px 4px 8px rgba(21, 165, 232, 0.6); /* Ombre subtile */
