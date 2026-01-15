@@ -103,14 +103,14 @@ let sommePassagers = async function() {
             //et on affiche les infos
             row.insertCell(0).textContent = key;
             row.insertCell(1).textContent = catPassager[key][0]
-            row.insertCell(2).textContent = catPassager[key][1]
-            row.insertCell(3).textContent = catPassager[key][2]
+            row.insertCell(2).textContent = catPassager[key][1].toFixed(1)
+            row.insertCell(3).textContent = catPassager[key][2].toFixed(1)
         }
     }
 
     //et on modifie le total dans le html aussi
     const totalPassagers = document.getElementById("totalPassagers");
-    totalPassagers.innerHTML = sommeTotalPassagers;
+    totalPassagers.innerHTML = sommeTotalPassagers.toFixed(1);
 
     // et le total (passagers + vehicules) augmente
     variables.total += sommeTotalPassagers;
@@ -143,13 +143,13 @@ let sommeVehicules = async function(){
             const row = tableVehicules.insertRow();
             row.insertCell(0).textContent = key;
             row.insertCell(1).textContent = catVehicule[key][0]
-            row.insertCell(2).textContent = catVehicule[key][1]
-            row.insertCell(3).textContent = catVehicule[key][2]
+            row.insertCell(2).textContent = catVehicule[key][1].toFixed(1)
+            row.insertCell(3).textContent = catVehicule[key][2].toFixed(1)
         }
     }
 
     const totalVehicules = document.getElementById("totalVehicules");
-    totalVehicules.innerHTML = sommeTotalVehicule;
+    totalVehicules.innerHTML = sommeTotalVehicule.toFixed(1);
 
     variables.total += sommeTotalVehicule;
 }
@@ -162,7 +162,7 @@ let Main = async function() {
     await sommeVehicules(); // pareil pour les vehicules
 
     const totalPrix = document.getElementById("totalPrix");
-    totalPrix.innerHTML = variables.total; // et on modifie le html du prix total (vehicule + passagers)
+    totalPrix.innerHTML = variables.total.toFixed(1); // et on modifie le html du prix total (vehicule + passagers)
 }
 
 Main();
