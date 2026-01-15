@@ -157,6 +157,7 @@ li:hover, button:hover {
     max-width: 100%;
 }
 
+
 .InfoTrajet p {
     display: flex;
     justify-content: space-between;
@@ -412,4 +413,34 @@ h2 {
     border-radius: 2rem;
     font-weight: bold;
     font-size: 1.5rem;
+}
+
+@media (max-width: 600px) {
+    .top {
+        flex-direction: column;
+    }
+    
+    .top ul {
+        flex-direction: column;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .carteEmbarquement {
+        flex-direction: column;
+    }
+
+    .ColonneGauche {
+        width: 100%;
+    }
+
+    .ColonneDroite {
+        width: 100%;
+    }
+
+    .carte {
+        flex-direction: column;
+    }
 }
