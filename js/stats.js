@@ -13,10 +13,10 @@ let Main = async function () {
         let nbPassagers = document.getElementById(`nbPassagers${i}`);
         let nbVehicules = document.getElementById(`nbVehicules${i}`);
 
-        caPassagers.innerHTML = data.passagers.chiffreAffaire;
-        caVehicules.innerHTML = data.vehicules.chiffreAffaire;
-        nbPassagers.innerHTML = data.passagers.nombre;
-        nbVehicules.innerHTML = data.vehicules.quantite;
+        caPassagers.innerHTML = data.passagers.chiffreAffaire.toFixed(1);
+        caVehicules.innerHTML = data.vehicules.chiffreAffaire.toFixed(1);
+        nbPassagers.innerHTML = data.passagers.nombre.toFixed(1);
+        nbVehicules.innerHTML = data.vehicules.quantite.toFixed(1);
     }
 
 }
